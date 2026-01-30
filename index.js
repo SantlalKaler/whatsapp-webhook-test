@@ -6,6 +6,7 @@ app.use(express.json());
 const VERIFY_TOKEN = "my_test_token";
 
 app.get("/webhook/whatsapp", (req, res) => {
+  console.log("api called of get");
   const mode = req.query["hub.mode"];
   const token = req.query["hub.verify_token"];
   const challenge = req.query["hub.challenge"];
